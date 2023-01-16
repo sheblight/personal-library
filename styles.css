@@ -1,3 +1,9 @@
+:root {
+    --form-width: 300px;
+    --form-height: 500px;
+    --form-padding: 20px 40px;
+}
+
 body {
     padding: 30px;
     background-color: darkslategray;
@@ -21,4 +27,42 @@ section {
 
 .book p:first-child {
     margin-top: 0;
+}
+
+.book-form {
+    display: block;
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.book-form form {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(4, 30px 50px) 100px;
+    box-sizing: border-box;
+    position: fixed;
+    width: var(--form-width);
+    height: var(--form-height);
+    top: 50%;
+    right: 50%;
+    margin-top: calc(var(--form-height)/-2);
+    margin-right: calc(var(--form-width)/-2);
+    padding: var(--form-padding);
+    background-color:rgb(133, 119, 83);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form label, form input {
+    margin: 0;
+}
+
+form>input {
+    height: 30px;
+    border-radius: 10px;
 }
