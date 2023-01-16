@@ -1,6 +1,7 @@
 let myLibrary = [];
 const firstBook = document.querySelector("div.book:first-of-type");
 const bookGroup = document.querySelector("section");
+const bookForm = document.querySelector("div.book-form");
 
 function Book(title, author, pages, read, element) {
     this.title = title;
@@ -36,9 +37,27 @@ function addBookToLibrary(event) {
     const isRead = document.getElementById("is-read").value;
     const element = firstBook.cloneNode(true);
     myLibrary.push(new Book(author, title, pages, isRead, element))
+    toggleNewBookForm();
 }
 
+// toggle new book form
+function toggleNewBookForm() {
+    if (bookForm.style.display == "none") {
+        bookForm.style.display = "block";
+    }
+    else {
+        bookForm.style.display = "none"
+    }
+}
+
+// Call when new book button is clicked
+function openBookForm(event) {
+    event.preventDefault();
+    toggleNewBookForm();
+}
 
 // main code
+const newBookButton = document.querySelector("button.book-add")
 const addBookButton = document.querySelector("form button");
+newBookButton.addEventListener("click", openBookForm, false);
 addBookButton.addEventListener("click", addBookToLibrary, false);
