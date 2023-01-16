@@ -36,7 +36,7 @@ function addBookToLibrary(event) {
     const pages = document.getElementById("page-count").value;
     const isRead = document.getElementById("is-read").value;
     const element = firstBook.cloneNode(true);
-    myLibrary.push(new Book(author, title, pages, isRead, element))
+    myLibrary.push(new Book(title, author, pages, isRead, element))
     toggleNewBookForm();
 }
 

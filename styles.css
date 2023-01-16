@@ -6,7 +6,13 @@
 
 body {
     padding: 30px;
-    background-color: darkslategray;
+    background-color: rgb(83, 63, 35);
+}
+
+h1 {
+    color:aliceblue;
+    text-align: center;
+    margin: 0 auto 10px;
 }
 
 section {
@@ -16,27 +22,33 @@ section {
     min-height: 80px;
     margin: 0;
     padding: 20px;
-    background-color: cadetblue;
+    background-color: rgb(212, 161, 49);
 }
 
 .book {
     display: none;
+    width: 100px;
     padding: 20px;
-    background-color: brown;
-    color:antiquewhite;
+    border: 3px solid rgb(31, 28, 28);
+    border-radius: 2px;
+    background-color:rgb(83, 63, 54);
+    color:rgb(250, 215, 222);
 }
 
 .book p:first-child {
     margin-top: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 button.book-add {
+    width: 100%;
     padding: 20px;
     border:none;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 6px rgba(0,0,0,0.3);
     margin: 15px auto auto;
     border-radius: 15px;
-    background-color: brown;
+    background-color: rgb(115, 92, 117);
     color: antiquewhite;
     font-size: 20px;
     font-weight: bold;
@@ -51,7 +63,7 @@ button.book-add {
     height: 100vh;
     top: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(8, 9, 12, 0.582);
 }
 
 .book-form form {
