@@ -1,6 +1,6 @@
 :root {
     --form-width: 300px;
-    --form-height: 500px;
+    --form-height: 450px;
     --form-padding: 20px 40px;
 }
 
@@ -39,6 +39,15 @@ section {
     margin-top: 0;
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
+}
+
+.book input {
+    width: 100%;
+    height: 20px;
+}
+
+.book input:checked {
+    accent-color: rgb(196, 88, 88);
 }
 
 button.book-add {
@@ -88,7 +97,19 @@ form label, form input {
     margin: 0;
 }
 
-form>input {
+form input {
     height: 30px;
     border-radius: 10px;
+    padding: 2px 5px;
+}
+
+form button {
+    border: 4px dashed rgb(59, 48, 42);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color:rgb(59, 48, 42);
+    background-color:rgb(236, 116, 69);
+    height: 60px;
 }

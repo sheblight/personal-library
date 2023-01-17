@@ -18,11 +18,11 @@ function Book(title, author, pages, read, element) {
     const titleElement = this.element.querySelector("p:nth-child(1)")
     const authorElement = this.element.querySelector("p:nth-child(2)")
     const pagesElement = this.element.querySelector("p:nth-child(3)")
-    const hasReadElement = this.element.querySelector("p:nth-child(4)")
+    const hasReadElement = this.element.querySelector("input")
     titleElement.textContent = this.title;
     authorElement.textContent = this.author;
     pagesElement.textContent = this.pages;
-    hasReadElement.textContent = this.read ? "Read" : "Unread";
+    hasReadElement.checked = this.read;
     this.element.style.display = "block";
     bookGroup.append(this.element);
 }
@@ -34,7 +34,7 @@ function addBookToLibrary(event) {
     const author = document.getElementById("author").value;
     const title = document.getElementById("title").value;
     const pages = document.getElementById("page-count").value;
-    const isRead = document.getElementById("is-read").value;
+    const isRead = document.getElementById("is-read").checked;
     const element = firstBook.cloneNode(true);
     myLibrary.push(new Book(title, author, pages, isRead, element))
     toggleNewBookForm();
